@@ -1,0 +1,96 @@
+.page-body {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  height: 100vh;
+  margin: 0;
+}
+
+@keyframes shine {
+  0% {
+    fill: #000000;
+  }
+  50% {
+    fill: #dddddd;
+  }
+  100% {
+    fill: #000000;
+  }
+}
+
+.big-wave {
+  animation-name: shine;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-delay: 550ms;
+}
+
+.little-wave {
+  animation-name: shine;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-delay: 0ms;
+}
+
+.top-container {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+
+.bottom-container {
+  width: 100%;
+  height: 70%;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.left-link,
+.right-link {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 4vw;
+  color: #000000;
+  text-decoration: none;
+  transition: 1s;
+}
+
+.left-link {
+  background-color: #fafafa;
+}
+
+.right-link {
+  background-color: #fafafa;
+  position: relative;
+}
+
+.right-link::before {
+  position: absolute;
+  content: "";
+  height: 80%;
+  width: 1px;
+  background-color: #cccccc;
+  left: 0px;
+}
+
+.left-link:hover {
+  color: #8c0000;
+  transition: 1s;
+}
+
+.right-link:hover {
+  color: #00008c;
+  transition: 1s;
+}
